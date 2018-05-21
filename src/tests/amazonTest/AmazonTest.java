@@ -1,3 +1,11 @@
+	/**
+	 * This test case validates prices for first 5 items and sorting of the 5 items by price.
+	 * Functionality: Validating top 5 items and its sorting.
+	 * 
+	 * @author M.Subramaniam
+	 */
+
+
 package tests.amazonTest;
 
 import static org.testng.Assert.assertTrue;
@@ -36,7 +44,7 @@ public class AmazonTest extends DriverSetup {
 
 
 	@Parameters()
-	@Test(description = "This will test few cases from Amazon website.")
+	@Test(description = "Test case to validate prices for first 5 items and sorting of the 5 itmes by price.")
 	public void groupSetup() throws Exception {
 
 		System.out.println("Launch the Amazon URL" + "\n");

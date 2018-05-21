@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="18.159">
+           time="19.391">
   <properties />
   
   
-            <testcase name="groupSetup" time="18.159" classname="tests.amazonTest.AmazonTest" />
+            <testcase name="groupSetup" time="19.391" classname="tests.amazonTest.AmazonTest" />
       
 </testsuite>

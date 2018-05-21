@@ -66,7 +66,7 @@ public class HelperMethods {
 
 			return true;
 		} catch (Exception e) {
-			System.out.println(e);
+			System.err.println(e);
 			System.err.println("Could not launch the browser");
 			return false;
 		}
@@ -91,6 +91,7 @@ public class HelperMethods {
 				;
 			return true;
 		} catch (Exception e) {
+			System.out.println(e);
 			System.err.println("Ipad air2 case filter not applied");
 			return false;
 		}
@@ -113,6 +114,7 @@ public class HelperMethods {
 				;
 			return true;
 		} catch (Exception e) {
+			System.out.println(e);
 			System.err.println("Plastics filter not applied"+"\n");
 			return false;
 		}
@@ -167,6 +169,7 @@ public class HelperMethods {
 			}
 
 		} catch (Exception e) {
+			System.out.println(e);
 			System.err.println("Cannot find names, prices and reviewss");
 		}
 	}
@@ -228,8 +231,7 @@ public class HelperMethods {
 		WebDriver d = driver;
 		try {
 
-			// Kept the minimum value to 19.99 as amazon returns 19.99 also for filter
-			// between 20-100 for prices
+			// Kept the minimum value to 19.99 as amazon returns 19.99 also for filter between 20-100 for prices
 			double minValue = 19.99;
 			double maxValue = 100.0;
 
@@ -284,6 +286,7 @@ public class HelperMethods {
 
 			return false;
 		} catch (Exception e) {
+			System.out.println(e);
 			System.err.println("First five results is not sorted");
 		}
 		return false;
@@ -303,9 +306,6 @@ public class HelperMethods {
 			List<WebElement> score = SearchResultsPage.score(driver);
 			List<Double> sortedscore = new ArrayList<Double>();
 			for (int i = 0; i < 5; i++) {
-				// sortedreviews.add((Double)
-				// NumberFormat.getNumberInstance(java.util.Locale.US).parse(score.get(i).getAttribute("innerHTML").replace("
-				// out of 5 stars", "").trim()));
 				sortedscore.add(Double
 						.parseDouble(score.get(i).getAttribute("innerHTML").replace(" out of 5 stars", "").trim()));
 				Collections.sort(sortedscore);
